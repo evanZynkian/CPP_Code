@@ -1,0 +1,146 @@
+#include <iostream>
+
+int main() {
+  
+  //the sorting hat!
+  
+  int gryffindor = 0;
+  int hufflepuff = 0;
+  int ravenclaw = 0;
+  int slytherin = 0;
+  
+  int answer1, answer2, answer3, answer4;
+  
+  std::cout << "You have Initiated the Sorting Hat Quiz!\n\n";
+  
+  // first question 
+  std::cout << "When I'm dead, I want people to remember me as: \n 1) The Good\n 2) The Great\n 3) The Wise\n 4) The Bold\n";
+  std::cin >> answer1;
+  
+  //if statement assigning answers to the appropriate harry potter house.
+  if (answer1 == 1) {
+    hufflepuff ++;
+  }
+  
+  else if (answer1 == 2) {
+    slytherin ++;
+  }
+  
+  else if (answer1 == 3) {
+    ravenclaw ++;
+  }
+  
+  else if (answer1 == 4) {
+    gryffindor ++;
+  }
+  
+  else {
+    std::cout << "Invalid input.\n";
+  }
+  
+  std::cout << "\nHmmm yesss, gooood, Next question\n\nQ2)Dawn or Dusk?\n 1) Dawn\n 2) Dusk\n";
+  
+  //inputs user answer for question two
+  std::cin >> answer2;
+    
+  //if statement to alocate the specific amount or none at all
+  if (answer2 == 1) {
+    gryffindor ++;
+    ravenclaw ++;
+  }
+  
+  else if (answer2 == 2) {
+    hufflepuff ++;
+    slytherin ++;
+  }
+  
+  else {
+    std::cout << "Invalid selection\n";
+  }
+  
+  //Third question
+  std::cout << "Which kind of instrument most pleases your ear?\n\n 1) The Violin\n 2) The trumpet\n 3) The piano\n 4) The drum\n";
+  
+  //places response and allocates it to answer3
+  std::cin >> answer3;
+  
+  if (answer3 == 1) {
+    slytherin ++;
+  }
+  
+  else if (answer3 == 2) {
+    hufflepuff ++;
+  }
+  
+  else if (answer3 == 3) {
+    ravenclaw ++;
+  }
+  
+  else if (answer3 == 4) {
+    gryffindor ++;
+  }
+  
+  else {
+    std::cout << "invalid input";
+  }
+  
+  std::cout << "\nQ4) Which road tempts you most?\n\n 1) The wide, sunny grassy lane\n 2) The narrow, dark, lantern-lit alley\n 3) the twisting, leaf-strewn path through woods\n 4) The cobbled street lined (ancient buildings)\n";
+  std::cin >> answer4;
+  
+  if (answer4 == 1) {
+    hufflepuff ++;
+  }
+  
+  else if (answer4 == 2) {
+    slytherin ++;
+  }
+  
+  else if (answer4 == 3) {
+    gryffindor ++;
+  }
+  
+  else if (answer4 == 4) {
+    ravenclaw ++;
+  }
+  
+  else {
+    std::cout << "invalid input";
+  }
+  
+  //initiate which house will be for you
+  std::string house;
+  
+  //integer that will increase in each individual if statement to find your house
+  int max = 0;
+  
+  if (gryffindor > max) {
+    
+    max == gryffindor;
+    house = "Gryffindor";
+  }
+  
+  if (hufflepuff > max) {
+    
+    max = hufflepuff;
+    house = "Hufflepuff";
+  }
+  
+  if (ravenclaw > max) {
+    
+    max = ravenclaw;
+    house = "Ravenclaw";
+  }
+  
+  if (slytherin > max) {
+    
+    max = slytherin;
+    house = "Slytherin";
+  }
+  
+  std::cout << house << "!!!\n\n";
+  
+  
+  //keep at bottom of the quiz for testing purposes, making sure points are allocated properly
+  std::cout << "Gryffindor points: " << gryffindor << "\nRavenclaw Points: " << ravenclaw << "\nHufflepuff Points: " << hufflepuff << "\nSlytherin Points: " << slytherin << "\n";
+  
+}
