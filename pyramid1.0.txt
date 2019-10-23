@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+// create a pyramid of N's the number of n's size
+int main()
+{
+    //initialize the n number to be made a pyramid of
+    int n = 6;
+    
+    //using a while loop, j initiation to flip the pyramid (starting from n inverts the pyramid)
+    int j = 0;
+    
+    //create while loop to increment up to N but starting the pyramid at the smallest "brick"
+    while (j < n)
+    {
+        //spaces required to make the pyramid look like a pyramid
+        //devided by 2 as it has to be in the middle as opposed to the end
+        for (int k = (n - j) / 2; k > 0; k--)
+        {
+            cout << " ";
+        }
+        
+        //actually print the N's for the pyramid
+        for (int i = 0; i <= j; i++)
+        {
+            cout << "N";
+        }
+        
+        cout << endl;
+        j++;
+    }
+
+    return 0;
+}
